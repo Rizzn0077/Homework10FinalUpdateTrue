@@ -1,12 +1,14 @@
 import matplotlib.pyplot as plt
+import numpy as np
 from x_and_y import *
 
-plt.plot(x_var(), y_var(), label="Лінія 1")
-plt.plot(x_var2(), y_var2(), label="Лінія 2")
-plt.plot(x_var3(), y_var3(), label="Лінія 3")
-plt.plot(x_var4(), y_var4(), label="Лінія 4")
-plt.xlabel('Сторона X')
-plt.ylabel('Сторона X')
-plt.title('Домашня Робота')
+x = np.linspace(0, generate_x_and_y(x=1, y=3))
+y = np.linspace(0, generate_x_and_y(x=5, y=8))
+
+plt.figure(figsize=(5, 2.7), layout='constrained')
+plt.plot(x, y, label='line')
+plt.xlabel('x label')
+plt.ylabel('y label')
+plt.title("Homework")
 plt.legend()
 plt.show()
